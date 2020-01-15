@@ -16,7 +16,7 @@ class Api::PhonesController < ApplicationController
         if phone.save
           render json: { status: 'SUCCESS', message: 'phone number save successfully', data: post }
         else
-          render json: { status: 'ERROR', message: 'phone number saved', data: post.errors }
+          render json: { status: 'ERROR', message: 'unable to save phone number', data: post.errors }
         end
       end
     else
